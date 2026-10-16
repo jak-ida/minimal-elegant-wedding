@@ -1,0 +1,13 @@
+{
+  "name": "wedding-template-dev-tests",
+  "private": true,
+  "description": "Optional developer tests for the wedding template. Not needed to use the website.",
+  "scripts": {
+    "test": "node functional.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "lighthouse": "^12.8.2",
+    "puppeteer-core": "^24.0.0"
+  }
+}

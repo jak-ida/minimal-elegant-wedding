@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start here: installing your wedding website template</title>
+<style>
+  :root { --ink: #2b3a30; --muted: #5a6860; --line: #d9d4c7; --bg: #faf8f3; --card: #fff; --accent: #34483b; --warn: #8a5a00; --warnbg: #fff6e0; --note: #eef3ec; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 52rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font: 600 2.1rem/1.2 Georgia, "Times New Roman", serif; margin: 0 0 .5rem; color: var(--accent); }
+  h2 { font: 600 1.45rem/1.3 Georgia, "Times New Roman", serif; margin: 2.75rem 0 .75rem; color: var(--accent); display: flex; gap: .75rem; align-items: baseline; }
+  h2 .n { flex: none; display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; font: 600 1rem/1 system-ui, sans-serif; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
+  p, li { max-width: 46rem; }
+  code, kbd { font: 0.92em ui-monospace, Consolas, Menlo, monospace; background: #efece4; padding: .1em .35em; border-radius: 4px; }
+  pre { background: #1f2a23; color: #f1efe8; padding: 1rem 1.1rem; border-radius: 8px; overflow-x: auto; font: 0.9rem/1.5 ui-monospace, Consolas, Menlo, monospace; }
+  pre code { background: none; padding: 0; color: inherit; }
+  .lead { font-size: 1.15rem; color: var(--muted); }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+  .note { background: var(--note); border-color: #cfdccb; }
+  .warn { background: var(--warnbg); border-color: #f0d9a0; color: #4a3200; }
+  .box > :first-child { margin-top: 0; } .box > :last-child { margin-bottom: 0; }
+  table { border-collapse: collapse; width: 100%; background: var(--card); font-size: .95rem; }
+  th, td { border: 1px solid var(--line); padding: .5rem .7rem; text-align: left; vertical-align: top; }
+  th { background: #f1eee6; }
+  a { color: #25503a; }
+  .toc a { display: inline-block; margin: 0 .9rem .25rem 0; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  @media (max-width: 40rem) { body { font-size: 16px; } h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Start here</h1>
+<p class="lead">This guide takes you from the downloaded ZIP to a wedding website on your own computer, then to the internet. You do not need to install a framework, a programme or a package manager, and you do not need to be a programmer. You need a web browser and a plain text editor.</p>
+
+<p class="toc"><strong>Jump to:</strong>
+  <a href="#s1">1 Unzip</a> <a href="#s2">2 Preview</a> <a href="#s3">3 Your details</a> <a href="#s4">4 Photos</a> <a href="#s5">5 Page title and sharing</a>
+  <a href="#s6">6 RSVP</a> <a href="#s7">7 Put it online</a> <a href="#s8">8 Final check</a> <a href="#help">Troubleshooting</a> <a href="#limits">What it does not do</a></p>
+
+<div class="box warn">
+  <p><strong>Please read this one thing first.</strong> This is a <em>static website</em>: a folder of files. It has no server behind it. That means <strong>the RSVP form does not save or send anything until you connect your own form service</strong> (Step 6). Until then it runs in a clearly labelled demo mode. Do not send the link to your guests before you have done Step 6 and tested it.</p>
+</div>
+
+<h2 id="s1"><span class="n">1</span> Unzip the download</h2>
+<ul>
+  <li><strong>Windows:</strong> right-click the ZIP, choose <em>Extract All&hellip;</em>, then <em>Extract</em>. Do not open files from inside the ZIP window; they will not work there.</li>
+  <li><strong>Mac:</strong> double-click the ZIP.</li>
+</ul>
+<p>You get a folder called <code>wedding-template</code>. Move it somewhere easy to find, such as your Documents folder. The important things inside it:</p>
+<table>
+  <tr><th>File or folder</th><th>What it is</th></tr>
+  <tr><td><code>index.html</code></td><td>The website itself. Open this in a browser.</td></tr>
+  <tr><td><code>js/config.js</code></td><td><strong>The file you edit.</strong> Names, date, story, schedule, FAQ, links, colours.</td></tr>
+  <tr><td><code>assets/images/</code></td><td>The pictures. They are grey placeholders; you replace them with your own photographs.</td></tr>
+  <tr><td><code>start-local-server.bat</code> / <code>.command</code></td><td>Double-click to preview the site on your computer (Windows / Mac).</td></tr>
+  <tr><td><code>README.md</code></td><td>The full reference guide.</td></tr>
+  <tr><td><code>LICENSE.txt</code>, <code>ASSETS.md</code></td><td>What you may do with the template, and where each font and image comes from.</td></tr>
+  <tr><td><code>css/</code>, <code>js/main.js</code>, <code>js/boot.js</code></td><td>Design and behaviour. You do not need to change these.</td></tr>
+</table>
+
+<h2 id="s2"><span class="n">2</span> Preview the website on your computer</h2>
+<p>Pick <strong>one</strong> of these. Option A is quickest; Option B shows the site exactly as it will look online.</p>
+
+<h3>Option A: just double-click <code>index.html</code></h3>
+<p>It opens in your browser. This was checked in Google Chrome. If anything looks wrong in another browser (fonts missing, a blank page), use Option B instead. Chrome may print a couple of harmless messages about fonts in its developer console when you open the file this way; they go away with Option B.</p>
+
+<h3>Option B (recommended): start the built-in preview server</h3>
+<p>This runs a tiny web server on <em>your own computer only</em>. Nobody else can see it, and nothing is uploaded.</p>
+<ul>
+  <li><strong>Windows:</strong> double-click <code>start-local-server.bat</code>. A black window opens and your browser shows the site at <code>http://localhost:8000</code>. If Python 3 is installed it is used; if not, a small built-in Windows script is used, so nothing has to be installed. If Windows says <em>&ldquo;Windows protected your PC&rdquo;</em>, that is its normal warning for downloaded scripts: choose <em>More info</em>, then <em>Run anyway</em> (or use Option C or D, which avoid this).</li>
+  <li><strong>Mac:</strong> the first time only, open <em>Terminal</em>, type <code>chmod +x </code> (with a space after it), drag <code>start-local-server.command</code> into the Terminal window, press Return. After that you can double-click the file. If macOS blocks it, right-click the file, choose <em>Open</em>, then <em>Open</em> again.</li>
+  <li><strong>Linux:</strong> in a terminal inside the folder, run <code>sh start-local-server.command</code>.</li>
+</ul>
+<p>To stop the server, close the black window (or press <kbd>Ctrl</kbd>+<kbd>C</kbd>). After you edit and save a file, just refresh the browser tab.</p>
+
+<h3>Option C: Visual Studio Code</h3>
+<p>Open the folder in VS Code, install the free &ldquo;Live Server&rdquo; extension, right-click <code>index.html</code> and choose <em>Open with Live Server</em>.</p>
+
+<h3>Option D: a command in a terminal</h3>
+<p>Open a terminal inside the <code>wedding-template</code> folder and run one of these (you only need one):</p>
+<pre><code>python -m http.server 8000      # needs Python 3; then open http://localhost:8000
+npx serve .                     # needs Node.js; then open the address it prints</code></pre>
+
+<h2 id="s3"><span class="n">3</span> Put in your own details</h2>
+<p>Open <code>js/config.js</code> in a plain text editor (Notepad, TextEdit set to plain text, or VS Code). <strong>Do not use Word or Google Docs</strong>: they change quote marks and break the file. Everything is in numbered sections with sample values. Change the words between the quote marks, save, refresh the browser.</p>
+
+<div class="box note">
+  <p><strong>Do these first (about ten minutes):</strong></p>
+  <ol>
+    <li><code>couple</code>: both names.</li>
+    <li><code>wedding.dateTime</code>: your date and time, e.g. <code>"2027-06-19T14:30:00"</code>. Add an offset such as <code>+02:00</code> if guests live in several time zones (details in <code>README.md</code>).</li>
+    <li><code>details</code>: venue, address and the &ldquo;Get Directions&rdquo; link (open your venue in a map service, press Share, paste the link).</li>
+    <li><code>schedule</code>, <code>story</code>, <code>faq</code>, <code>introductions</code>: replace the sample text or delete what you do not need.</li>
+    <li><code>faq.contact</code>: a real e-mail address or phone number.</li>
+    <li><code>gifts</code> and <code>travel</code>: real links, or set a link to <code>""</code> to hide it.</li>
+  </ol>
+</div>
+
+<h3>Rules that keep the file working</h3>
+<ul>
+  <li>Keep the <strong>straight quote marks</strong> <code>"</code> around text, and keep the <strong>commas</strong> at the end of lines. Most problems come from a missing quote or comma.</li>
+  <li>If your text contains a quote mark, write it as <code>\"</code>. Example: <code>"She said \"yes\""</code>.</li>
+  <li><code>\n</code> inside a heading makes a line break. Words wrapped in <code>*asterisks*</code> become the italic gold accent.</li>
+  <li>Text is shown exactly as typed. Web-page code (HTML) is shown as text, on purpose.</li>
+  <li>To remove an item (a schedule row, an FAQ question), delete everything from its <code>{</code> to its <code>}</code> and the comma after it.</li>
+  <li>If you save a mistake, the page may go blank. Open the browser console (<kbd>F12</kbd>, then <em>Console</em>) and it names the problem and the line. Undo your last change and try again.</li>
+</ul>
+
+<h2 id="s4"><span class="n">4</span> Replace the placeholder pictures</h2>
+<p>The pictures in <code>assets/images/</code> are grey placeholders that show you the size and shape each slot needs. Each one has the size printed on it. <strong>The easiest way:</strong> prepare your photo to the same shape, export it as WebP or JPEG, and save it over the placeholder with the <em>same file name</em>. No code changes needed. <code>README.md</code> has a table of every slot with recommended sizes.</p>
+<ul>
+  <li>Photos make the page slow if they are huge. Aim for WebP at quality 75&ndash;82 and the widths listed in the table. Free tool: <a href="https://squoosh.app">squoosh.app</a>.</li>
+  <li>Update the description (<code>alt</code>) of every photo in <code>config.js</code>. It is read aloud to blind visitors and shown if a picture fails to load. The placeholder text says &ldquo;Placeholder image&rdquo; so you can search for it and be sure none is left.</li>
+  <li>Only use photographs you own or have permission to use, and ask people in them if you are unsure.</li>
+</ul>
+
+<h2 id="s5"><span class="n">5</span> Page title and link previews (one edit in <code>index.html</code>)</h2>
+<p>Open <code>index.html</code> and look at the top of the file. Lines marked <code>REPLACE</code> control the browser-tab title, the Google description and the picture and text shown when your link is shared in a chat app. Update them with your names and, once you know it, your real web address. The sharing picture is <code>assets/images/og-image.jpg</code> (1200 &times; 630). Replace the favicon (<code>assets/icons/favicon.svg</code>) with your initials if you like.</p>
+
+<h2 id="s6"><span class="n">6</span> RSVP: what it does and what you must add</h2>
+<div class="box warn">
+  <p><strong>Out of the box, nothing is saved or sent.</strong> The form checks the answers and shows a screen that says plainly it is a demonstration. A website made of static files cannot store guest replies by itself, and this template does not include a database, a server or an e-mail service.</p>
+</div>
+<p>To collect real replies you connect a service you choose and control, in <code>config.js</code> under <code>rsvp</code>:</p>
+<ol>
+  <li>Create a form with a form-handling service (examples: Formspree, Getform, Basin, FormSubmit) or use your own serverless function. Copy the <code>https://&hellip;</code> address it gives you.</li>
+  <li>Set <code>mode: "production"</code> and paste the address into <code>endpoint</code>.</li>
+  <li>Upload the site (Step 7), submit a <strong>real test RSVP from the live site</strong> and confirm it arrives. Test an accept, a decline, and a name with an accent or apostrophe.</li>
+</ol>
+<p>Things to know:</p>
+<ul>
+  <li>Never put passwords or secret keys in any file of this website; everyone can read them.</li>
+  <li>The connection was checked here against a <em>simulated</em> service only, not against any real company&rsquo;s service. That is why Step 6.3 matters.</li>
+  <li>If the endpoint is empty or not <code>https</code>, the form falls back to demo mode instead of pretending to send.</li>
+  <li>You are responsible for how you store and protect guests&rsquo; names and e-mails, and for any privacy statement your local law requires. There is an editable one-line privacy note under the form.</li>
+  <li>There is no guest list, invitation code, reminder e-mail or confirmation e-mail. The service you connect may offer some of these.</li>
+</ul>
+
+<h2 id="s7"><span class="n">7</span> Put the website online</h2>
+<p>Upload <strong>the contents of the folder</strong> (keep the folders inside it exactly as they are) to any service that hosts static files. Examples (all have free or low-cost plans; check their current terms):</p>
+<table>
+  <tr><th>Service</th><th>How</th></tr>
+  <tr><td>Netlify</td><td>Drag the folder onto the &ldquo;Netlify Drop&rdquo; page.</td></tr>
+  <tr><td>Cloudflare Pages</td><td>Create a project and choose direct upload.</td></tr>
+  <tr><td>GitHub Pages</td><td>Put the files in a repository and switch on Pages in its settings.</td></tr>
+  <tr><td>Ordinary web hosting</td><td>Upload everything into <code>public_html</code> (or <code>www</code>) with the file manager or FTP.</td></tr>
+</table>
+<p>Afterwards: put your real address into the <code>canonical</code>, <code>og:url</code>, <code>og:image</code> and <code>twitter:image</code> lines in <code>index.html</code> (the image address must start with <code>https://</code>), make sure the address starts with <code>https://</code>, and re-upload. You do not upload <code>start-local-server.*</code>, <code>README.md</code>, <code>ASSETS.md</code>, <code>TESTING.md</code>, <code>LICENSE.txt</code> or this file; they are harmless if you do, but not needed. Keep <code>assets/fonts/OFL.txt</code> with the fonts.</p>
+
+<h2 id="s8"><span class="n">8</span> Final check before you send the link</h2>
+<ul>
+  <li>Search <code>config.js</code> for <code>example.com</code>, <code>Amara</code>, <code>Daniel</code>, <code>Willowbrook</code>, <code>Placeholder image</code> and <code>Your Studio Name</code>. None should remain, unless you keep the template credit (see <code>LICENSE.txt</code>).</li>
+  <li>Open the live site on a real phone and on a computer. Scroll everything, open the menu and a photo, and send a test RSVP.</li>
+  <li>Ask someone else to proofread the dates, times and address.</li>
+  <li><code>TESTING.md</code> has a longer checklist, including keyboard and screen-reader checks.</li>
+</ul>
+
+<h2 id="help">Troubleshooting</h2>
+<table>
+  <tr><th>Problem</th><th>What to try</th></tr>
+  <tr><td>The page is blank or shows only a notice</td><td>Press <kbd>F12</kbd>, open <em>Console</em>, read the red message. It is nearly always a missing quote mark or comma in <code>js/config.js</code> in the place you edited last. Undo that edit. Also check that JavaScript is not switched off in the browser.</td></tr>
+  <tr><td>My changes do not appear</td><td>Did you save the file? Hold <kbd>Shift</kbd> and click refresh. Make sure you edited the copy of the folder that you are previewing.</td></tr>
+  <tr><td>The countdown shows nothing</td><td>The date is not a real date (for example 30 February or month 13). The console says so. Use the format <code>"2027-06-19T14:30:00"</code>.</td></tr>
+  <tr><td>Fonts look plain when I double-click <code>index.html</code></td><td>Use Option B (the preview server) or upload the site. Browsers other than Chrome can be stricter about files opened directly from disk.</td></tr>
+  <tr><td><code>start-local-server.bat</code> closes immediately</td><td>Administrator rights are not needed. Try Option C or D instead. If port 8000 is already in use, the built-in Windows server picks the next free port and prints the address in its window; the Python version needs you to close the other program first.</td></tr>
+  <tr><td>Windows warns about the <code>.bat</code> file</td><td>That is normal for downloaded scripts. Choose <em>More info</em>, <em>Run anyway</em>, or use Option C or D.</td></tr>
+  <tr><td>A photo looks stretched or blurry</td><td>Use the same shape and the recommended width for that slot (table in <code>README.md</code>), and set the real <code>width</code> and <code>height</code> in <code>config.js</code> if you changed file names.</td></tr>
+  <tr><td>RSVP says &ldquo;demo&rdquo; on the live site</td><td><code>rsvp.mode</code> is still <code>"demo"</code>, or the endpoint is empty or not <code>https</code>. See Step 6.</td></tr>
+</table>
+
+<h2 id="limits">What this template does not do</h2>
+<ul>
+  <li>It does <strong>not</strong> store RSVPs, send e-mails, manage a guest list, take payments or run any server code. Those need a service you connect.</li>
+  <li>The words on the page are written by JavaScript from <code>config.js</code>. A visitor who has JavaScript switched off sees the design and pictures but not the wording.</li>
+  <li>It is in English. You can translate the text in <code>config.js</code> and some labels in <code>index.html</code>, but there is no language switcher and right-to-left languages are not styled.</li>
+  <li>It has been checked with automated tests in Chrome and with accessibility scanners. It has <strong>not</strong> been tested in Safari or Firefox, on real phones, with a real screen reader, or against a live RSVP service. Please do your own checks (<code>TESTING.md</code>).</li>
+</ul>
+
+<footer>
+  Full reference: <code>README.md</code> &middot; Licence: <code>LICENSE.txt</code> &middot; Fonts and images: <code>ASSETS.md</code>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ====================================================================
+       SEO AND SOCIAL SHARING (REPLACE these values for your wedding).
+       Social networks and search engines read these tags without running
+       JavaScript, so they are written here rather than in js/config.js.
+       ==================================================================== -->
+  <title>Amara &amp; Daniel | Wedding Celebration, 19 June 2027</title><!-- REPLACE -->
+  <meta name="description" content="Join Amara and Daniel for their wedding celebration on 19 June 2027 at Willowbrook Gardens. Find the story, schedule, travel details and RSVP."><!-- REPLACE -->
+  <meta name="theme-color" content="#34483B">
+  <link rel="canonical" href="https://www.your-domain.com/"><!-- REPLACE with your website address -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amara &amp; Daniel"><!-- REPLACE -->
+  <meta property="og:title" content="Amara &amp; Daniel | Wedding Celebration"><!-- REPLACE -->
+  <meta property="og:description" content="Two hearts, one beautiful beginning. Join us on 19 June 2027."><!-- REPLACE -->
+  <meta property="og:url" content="https://www.your-domain.com/"><!-- REPLACE -->
+  <meta property="og:image" content="https://www.your-domain.com/assets/images/og-image.jpg"><!-- REPLACE (must be an absolute URL) -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Amara and Daniel walking through a golden meadow at sunset."><!-- REPLACE -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amara &amp; Daniel | Wedding Celebration"><!-- REPLACE -->
+  <meta name="twitter:description" content="Two hearts, one beautiful beginning. Join us on 19 June 2027."><!-- REPLACE -->
+  <meta name="twitter:image" content="https://www.your-domain.com/assets/images/og-image.jpg"><!-- REPLACE -->
+
+  <!-- Favicon placeholder: replace assets/icons/favicon.svg with your monogram -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts are self-hosted: no third-party requests. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="assets/fonts/cormorantgaramond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dmsans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Start loading the hero photograph immediately (it is the largest visible element). -->
+  <link rel="preload" as="image" href="assets/images/hero-864.webp"
+        imagesrcset="assets/images/hero-480.webp 480w, assets/images/hero-640.webp 640w, assets/images/hero-864.webp 864w"
+        imagesizes="(min-width: 960px) 42vw, 88vw" fetchpriority="high">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tiny script: marks that JavaScript is available so animations can be enabled safely. -->
+  <script src="js/boot.js"></script>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Decorative SVG symbols reused around the page -->
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ornament" viewBox="0 0 200 32">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="ornament__stem">
+          <path d="M86 16C70 16 52 13 12 17"/>
+          <path d="M114 16C130 16 148 13 188 17"/>
+        </g>
+        <path d="M100 10.5 105.5 16 100 21.5 94.5 16Z" fill="currentColor"/>
+        <g id="ornament-leaves" class="ornament__leaves" fill="var(--ornament-leaf, currentColor)">
+          <path d="M74 15.5C71 8 64 5 57 5.5 59 11.5 65 15.5 74 15.5Z"/>
+          <path d="M74 16.5C71 24 64 27 57 26.5 59 20.5 65 16.5 74 16.5Z"/>
+          <path d="M50 15.5C47 9.5 41 7.5 35 8 37 13 42 15.5 50 15.5Z"/>
+          <path d="M50 16.5C47 22.5 41 24.5 35 24 37 19 42 16.5 50 16.5Z"/>
+          <path d="M30 16C27 12 23 11 19 11.5 21 14.5 24.5 16 30 16Z"/>
+        </g>
+        <use href="#ornament-leaves" transform="matrix(-1 0 0 1 200 0)"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+      <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <noscript>
+    <p class="noscript-note">This wedding website needs JavaScript to show the invitation details. Please enable JavaScript in your browser, or contact the couple directly.</p>
+  </noscript>
+
+  <!-- ============================ NAVIGATION ============================ -->
+  <header class="site-header" data-site-header>
+    <nav class="site-nav container" aria-label="Primary">
+      <a class="brand" href="#top">
+        <span class="brand__mark" data-bind="@monogram"></span><span class="sr-only"> (back to top)</span>
+      </a>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+
+      <div class="site-nav__panel" id="site-menu" data-menu-panel>
+        <ul class="site-nav__list">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#details">Wedding Details</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li class="site-nav__cta"><a class="btn btn--primary btn--small" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ B. HERO ============================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner container">
+
+        <div class="hero__text">
+          <p class="eyebrow hero__eyebrow" data-bind="hero.eyebrow"></p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__name hero__name--one" data-bind="couple.partnerOne"></span>
+            <span class="hero__name hero__name--two"><span class="hero__amp">&amp;</span> <span data-bind="couple.partnerTwo"></span></span>
+          </h1>
+
+          <svg class="ornament hero__ornament" viewBox="0 0 200 32" aria-hidden="true" focusable="false"><use href="#ornament"/></svg>
+
+          <!-- Stashed: "Two hearts, one beautiful beginning." Wording is in js/config.js as hero.taglineStash.
+               To show it again, remove these comment markers and set hero.tagline to that text.
+          <p class="hero__tagline" data-bind-rich="hero.tagline"></p>
+          -->
+          <p class="hero__invitation" data-bind="hero.invitation"></p>
+
+          <dl class="hero__facts">
+            <div class="hero__fact">
+              <dt class="sr-only">Date</dt>
+              <dd class="hero__date" data-bind="@dateLong"></dd>
+            </div>
+            <div class="hero__fact">
+              <dt class="sr-only">Location</dt>
+              <dd class="hero__location" data-bind="hero.locationLine"></dd>
+            </div>
+          </dl>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#story"><span data-bind="hero.primaryButton">Discover Our Story</span><svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-arrow"/></svg></a>
+            <a class="btn btn--outline" href="#rsvp" data-bind="hero.secondaryButton">RSVP</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__outline" aria-hidden="true"></div>
+          <div class="hero__arch">
+            <img class="hero__image" data-bind-img="hero.image"
+                 src="assets/images/hero-864.webp"
+                 srcset="assets/images/hero-480.webp 480w, assets/images/hero-640.webp 640w, assets/images/hero-864.webp 864w"
+                 sizes="(min-width: 960px) 42vw, 88vw"
+                 width="864" height="1152"
+                 alt="Amara and Daniel laughing together among garden roses at golden hour."
+                 fetchpriority="high" decoding="async">
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-label">Save the date</span>
+            <span class="hero__badge-date" data-bind="@dateNumeric"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ C. COUNTDOWN ============================ -->
+    <section class="countdown" id="countdown" aria-labelledby="countdown-title">
+      <div class="countdown__inner container">
+        <header class="countdown__intro" data-reveal>
+          <p class="eyebrow" data-bind="countdown.eyebrow"></p>
+          <h2 class="countdown__title" id="countdown-title" data-bind-rich="countdown.heading"></h2>
+        </header>
+
+        <div class="countdown__timer" data-countdown role="group" aria-label="Time remaining until the wedding" data-reveal>
+          <div class="countdown__unit">
+            <span class="countdown__number" data-unit="days" aria-hidden="true">000</span>
+            <span class="countdown__label" data-bind="countdown.labels.days"></span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__number" data-unit="hours" aria-hidden="true">00</span>
+            <span class="countdown__label" data-bind="countdown.labels.hours"></span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__number" data-unit="minutes" aria-hidden="true">00</span>
+            <span class="countdown__label" data-bind="countdown.labels.minutes"></span>
+          </div>
+          <div class="countdown__unit">
+            <span class="countdown__number" data-unit="seconds" aria-hidden="true">00</span>
+            <span class="countdown__label" data-bind="countdown.labels.seconds"></span>
+          </div>
+        </div>
+
+        <!-- Read by screen readers when they reach this section. Not a live region, so it is never announced every second. -->
+        <p class="sr-only" data-countdown-summary></p>
+        <p class="countdown__message" data-countdown-message hidden></p>
+      </div>
+    </section>
+
+    <!-- ============================ D. OUR STORY ============================ -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container story__grid">
+        <header class="section-head story__head" data-reveal>
+          <p class="eyebrow" data-bind="story.eyebrow"></p>
+          <h2 class="section-title" id="story-title" data-bind-rich="story.heading"></h2>
+        </header>
+
+        <figure class="story__figure image-reveal" data-reveal="mask">
+          <div class="media">
+            <img data-bind-img="story.image" alt="" loading="lazy" decoding="async"
+                 width="1152" height="864" sizes="(min-width: 960px) 46vw, 92vw">
+          </div>
+        </figure>
+
+        <div class="story__body prose" data-render="storyParagraphs" data-reveal></div>
+
+        <div class="story__timeline" data-reveal>
+          <h3 class="story__timeline-title" data-bind="story.milestonesHeading"></h3>
+          <ol class="milestones" data-render="milestones"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ E. COUPLE ============================
+         To remove this section: delete everything from this comment down to
+         the matching "END COUPLE" comment, or set introductions.enabled to
+         false in js/config.js. -->
+    <section class="section section--sage couple" id="couple" aria-labelledby="couple-title" data-couple-section>
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow" data-bind="introductions.eyebrow"></p>
+          <h2 class="section-title" id="couple-title" data-bind-rich="introductions.heading"></h2>
+        </header>
+        <div class="couple__grid" data-render="people"></div>
+      </div>
+    </section>
+    <!-- END COUPLE -->
+
+    <!-- ============================ F. WEDDING DETAILS ============================ -->
+    <section class="section details" id="details" aria-labelledby="details-title">
+      <div class="container details__grid">
+        <header class="section-head details__head" data-reveal>
+          <p class="eyebrow" data-bind="details.eyebrow"></p>
+          <h2 class="section-title" id="details-title" data-bind-rich="details.heading"></h2>
+          <p class="details__intro" data-bind="details.intro"></p>
+          <a class="btn btn--primary" data-bind-href="details.mapUrl" target="_blank" rel="noopener noreferrer">
+            <span data-bind="details.directionsLabel"></span>
+            <svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-arrow"/></svg>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </header>
+        <dl class="facts" data-render="details"></dl>
+      </div>
+    </section>
+
+    <!-- ============================ G. SCHEDULE ============================ -->
+    <section class="section section--rose schedule" id="schedule" aria-labelledby="schedule-title">
+      <div class="container schedule__grid">
+        <header class="section-head schedule__head" data-reveal>
+          <p class="eyebrow" data-bind="schedule.eyebrow"></p>
+          <h2 class="section-title" id="schedule-title" data-bind-rich="schedule.heading"></h2>
+          <svg class="ornament" viewBox="0 0 200 32" aria-hidden="true" focusable="false"><use href="#ornament"/></svg>
+        </header>
+        <ol class="day-timeline" data-render="schedule"></ol>
+      </div>
+    </section>
+
+    <!-- ============================ H. GALLERY ============================ -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="eyebrow" data-bind="gallery.eyebrow"></p>
+          <h2 class="section-title" id="gallery-title" data-bind-rich="gallery.heading"></h2>
+          <p class="section-intro" data-bind="gallery.intro"></p>
+        </header>
+        <ul class="gallery__grid" data-render="gallery"></ul>
+      </div>
+    </section>
+
+    <!-- ============================ I. RSVP ============================ -->
+    <section class="section section--sage rsvp" id="rsvp" aria-labelledby="rsvp-title">
+      <div class="container rsvp__grid">
+        <header class="section-head rsvp__head" data-reveal>
+          <p class="eyebrow" data-bind="rsvp.eyebrow"></p>
+          <h2 class="section-title" id="rsvp-title" data-bind-rich="rsvp.heading"></h2>
+          <p class="rsvp__message" data-bind="rsvp.message"></p>
+          <p class="rsvp__deadline"><span class="rsvp__deadline-label">Kindly reply by</span> <strong data-bind="@deadlineLong"></strong></p>
+          <p class="rsvp__demo-notice" data-demo-notice hidden role="note"></p>
+        </header>
+
+        <div class="rsvp__card" data-reveal>
+          <form class="rsvp-form" data-rsvp-form novalidate>
+            <div class="field">
+              <label for="rsvp-name">Full name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <input id="rsvp-name" name="name" type="text" autocomplete="name" required aria-describedby="rsvp-name-error" maxlength="120">
+              <p class="field__error" id="rsvp-name-error" data-error-for="name" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="rsvp-email">Email address <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <input id="rsvp-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="rsvp-email-error" maxlength="160">
+              <p class="field__error" id="rsvp-email-error" data-error-for="email" hidden></p>
+            </div>
+
+            <fieldset class="field choice" aria-describedby="rsvp-attendance-error">
+              <legend>Will you be joining us? <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></legend>
+              <div class="choice__options">
+                <label class="choice__option">
+                  <input type="radio" name="attendance" value="accepts" required>
+                  <span class="choice__box"><span class="choice__text">Accepts with pleasure</span></span>
+                </label>
+                <label class="choice__option">
+                  <input type="radio" name="attendance" value="declines">
+                  <span class="choice__box"><span class="choice__text">Declines with regret</span></span>
+                </label>
+              </div>
+              <p class="field__error" id="rsvp-attendance-error" data-error-for="attendance" hidden></p>
+            </fieldset>
+
+            <div class="field" data-accept-only hidden>
+              <label for="rsvp-guests">Number of guests</label>
+              <select id="rsvp-guests" name="guests" aria-describedby="rsvp-guests-hint rsvp-guests-error"></select>
+              <p class="field__hint" id="rsvp-guests-hint" data-bind="rsvp.allowPlusOneNote"></p>
+              <p class="field__error" id="rsvp-guests-error" data-error-for="guests" hidden></p>
+            </div>
+
+            <div class="field" data-accept-only hidden>
+              <label for="rsvp-dietary">Dietary requirements <span class="optional">(optional)</span></label>
+              <textarea id="rsvp-dietary" name="dietary" rows="2" maxlength="500" aria-describedby="rsvp-dietary-hint"></textarea>
+              <p class="field__hint" id="rsvp-dietary-hint">Allergies, vegetarian, vegan or anything else we should know.</p>
+            </div>
+
+            <div class="field">
+              <label for="rsvp-message">A message for the couple <span class="optional">(optional)</span></label>
+              <textarea id="rsvp-message" name="message" rows="3" maxlength="1000"></textarea>
+            </div>
+
+            <!-- Spam trap: real people never see or fill this field. -->
+            <div class="hp" aria-hidden="true">
+              <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="rsvp-form__error" data-form-error role="alert" tabindex="-1" hidden></div>
+
+            <button class="btn btn--primary btn--block" type="submit" data-submit>
+              <span class="btn__label">Send my response</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <p class="rsvp-form__privacy" data-bind="rsvp.privacyNote"></p>
+          </form>
+
+          <div class="rsvp-success" data-rsvp-success role="group" aria-labelledby="rsvp-success-title" tabindex="-1" hidden>
+            <svg class="ornament" viewBox="0 0 200 32" aria-hidden="true" focusable="false"><use href="#ornament"/></svg>
+            <h3 class="rsvp-success__title" id="rsvp-success-title" data-success-title></h3>
+            <p class="rsvp-success__text" data-success-text></p>
+            <p class="rsvp-success__demo" data-success-demo hidden></p>
+            <dl class="rsvp-success__summary" data-success-summary></dl>
+            <button class="btn btn--outline" type="button" data-rsvp-reset>Send another response</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ J. FAQ ============================ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <header class="section-head faq__head" data-reveal>
+          <p class="eyebrow" data-bind="faq.eyebrow"></p>
+          <h2 class="section-title" id="faq-title" data-bind-rich="faq.heading"></h2>
+        </header>
+        <div class="faq__list" data-render="faq" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- ============================ K. GIFTS ============================ -->
+    <section class="section section--rose gifts" id="gifts" aria-labelledby="gifts-title">
+      <div class="container gifts__inner" data-reveal>
+        <p class="eyebrow" data-bind="gifts.eyebrow"></p>
+        <h2 class="section-title" id="gifts-title" data-bind-rich="gifts.heading"></h2>
+        <svg class="ornament" viewBox="0 0 200 32" aria-hidden="true" focusable="false"><use href="#ornament"/></svg>
+        <p class="gifts__text" data-bind="gifts.text"></p>
+        <div class="gifts__actions">
+          <a class="btn btn--primary" data-bind-href="gifts.registryUrl" data-hide-if-empty target="_blank" rel="noopener noreferrer"><span data-bind="gifts.registryLabel"></span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn btn--outline" data-bind-href="gifts.fundUrl" data-hide-if-empty target="_blank" rel="noopener noreferrer"><span data-bind="gifts.fundLabel"></span><span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ L. TRAVEL ============================ -->
+    <section class="section travel" id="travel" aria-labelledby="travel-title">
+      <div class="container travel__grid">
+        <div class="travel__intro" data-reveal>
+          <header class="section-head">
+            <p class="eyebrow" data-bind="travel.eyebrow"></p>
+            <h2 class="section-title" id="travel-title" data-bind-rich="travel.heading"></h2>
+          </header>
+          <address class="travel__venue">
+            <strong data-bind="details.venueName"></strong>
+            <span data-render="venueAddress"></span>
+          </address>
+          <p class="travel__note" data-bind="travel.venueNote"></p>
+          <ul class="travel__notes" data-render="travelNotes"></ul>
+          <a class="btn btn--outline" data-bind-href="travel.mapUrl" target="_blank" rel="noopener noreferrer"><span data-bind="travel.mapLabel"></span><span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+
+        <div class="travel__stay" data-reveal>
+          <h3 class="travel__stay-title" data-bind="travel.accommodationHeading"></h3>
+          <ul class="stays" data-render="stays"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ M. FINAL INVITATION ============================ -->
+    <section class="finale" id="celebrate" aria-labelledby="finale-title">
+      <div class="finale__media">
+        <img data-bind-img="finale.image" alt="" loading="lazy" decoding="async" width="1280" height="720" sizes="100vw">
+      </div>
+      <div class="finale__inner container" data-reveal>
+        <p class="eyebrow finale__date" data-bind="@dateLong"></p>
+        <h2 class="finale__title" id="finale-title" data-bind-rich="finale.heading"></h2>
+        <svg class="ornament finale__ornament" viewBox="0 0 200 32" aria-hidden="true" focusable="false"><use href="#ornament"/></svg>
+        <p class="finale__text"><span data-bind="finale.text"></span><br><span class="finale__signature" data-bind="finale.signature"></span></p>
+        <a class="btn btn--light" href="#rsvp"><span data-bind="finale.button"></span><svg class="btn__icon" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ N. FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__names">
+        <p class="site-footer__title" data-bind="@names"></p>
+        <p class="site-footer__date" data-bind="@dateLong"></p>
+        <p class="site-footer__hashtag" data-bind="footer.hashtag"></p>
+      </div>
+
+      <ul class="site-footer__social" data-render="socials" aria-label="Social links"></ul>
+
+      <a class="site-footer__top" href="#top">
+        <span data-bind="footer.backToTopLabel"></span>
+        <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-up"/></svg>
+      </a>
+    </div>
+    <div class="container site-footer__legal">
+      <p data-bind="@copyright"></p>
+      <p class="site-footer__attribution" data-attribution hidden></p>
+    </div>
+  </footer>
+
+  <!-- ============================ LIGHTBOX ============================ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer" data-lightbox>
+    <div class="lightbox__stage" data-lightbox-stage>
+      <button class="lightbox__btn lightbox__close" type="button" data-lightbox-close aria-label="Close photo viewer">
+        <svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#icon-close"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Previous photo">
+        <svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#icon-prev"/></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__image" data-lightbox-image alt="" decoding="async"
+             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1" height="1">
+        <figcaption class="lightbox__caption"><span data-lightbox-count></span></figcaption>
+      </figure>
+      <button class="lightbox__btn lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photo">
+        <svg width="26" height="26" aria-hidden="true" focusable="false"><use href="#icon-next"/></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

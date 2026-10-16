@@ -1,0 +1,19 @@
+---
+description: Remind to restore the config-driven template before publishing
+alwaysApply: true
+---
+
+# Publish reminder
+
+The wedding site is in a temporary plain-HTML editing mode. Wording is edited in `index.html`, not `js/config.js`.
+
+- `<html data-edit>` is set. `js/config.js` is not loaded.
+- `index.template.html` is the config-driven page. Do not edit it while drafting.
+
+When the user says they are ready to publish, go live, or restore the template, stop and remind them before doing anything else. Then, only after they confirm:
+
+1. Copy the edited wording from `index.html` back into `js/config.js`.
+2. Replace `index.html` with `index.template.html`.
+3. Load `js/config.js` again and remove `data-edit`.
+
+Do not publish, or remove `data-edit`, until they confirm that restore.

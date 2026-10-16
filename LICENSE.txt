@@ -1,0 +1,82 @@
+WEDDING WEBSITE TEMPLATE - LICENCE AGREEMENT
+=============================================
+
+Product:   Wedding Website Template ("the Template")
+Licensor:  [Your Name or Studio Name] ("the Author")
+Version:   1.0
+
+-------------------------------------------------------------------------------
+1. WHAT YOU MAY DO (Standard Licence)
+-------------------------------------------------------------------------------
+After purchasing the Template you ("the Buyer") may:
+
+  a) Use the Template to create ONE wedding website for ONE wedding
+     (your own, or for one client).
+  b) Edit, restyle, translate and extend the code and content for that website.
+  c) Host the finished website on any web host or static hosting service.
+  d) Keep the template credit in the footer, or remove it ONLY if you hold the
+     "Remove Attribution" option of this licence (see section 3).
+
+-------------------------------------------------------------------------------
+2. WHAT YOU MAY NOT DO
+-------------------------------------------------------------------------------
+Without written permission from the Author, you may NOT:
+
+  a) Resell, redistribute, sublicense, share or give away the Template, in
+     whole or in part, whether modified or not, as a download, ZIP file,
+     repository, theme, page-builder import, or inside another template or
+     product.
+  b) Use one purchase for more than one wedding or more than one client.
+  c) Publish the unmodified source code in a public repository.
+  d) Claim to be the original author of the Template.
+  e) Use the sample text, placeholder images or the Author's branding to promote
+     another product or service.
+
+-------------------------------------------------------------------------------
+3. ATTRIBUTION
+-------------------------------------------------------------------------------
+The demo footer contains a small line crediting the template author. It is
+controlled in js/config.js (footer.showAttribution). Buyers who purchased the
+"Remove Attribution" option (or a licence that includes it) may set it to
+false. Otherwise the credit must remain visible.
+
+-------------------------------------------------------------------------------
+4. THIRD-PARTY MATERIALS
+-------------------------------------------------------------------------------
+The Template includes fonts that are covered by their own terms. These are
+listed in ASSETS.md. In particular:
+
+  - Fonts (Cormorant Garamond and DM Sans) are licensed under the SIL Open Font
+    License 1.1 and may be used, including commercially, according to that
+    licence. Their licence text is in assets/fonts/OFL.txt and must stay with
+    the font files. This Template licence does not replace or restrict the
+    font licence.
+  - The Template contains no photographs. The pictures supplied are plain
+    placeholders created for the Template. The Buyer must supply their own
+    photographs and is responsible for having the right to use them (see
+    ASSETS.md).
+
+-------------------------------------------------------------------------------
+5. NO WARRANTY AND LIMITATION OF LIABILITY
+-------------------------------------------------------------------------------
+The Template is supplied "as is", without warranty of any kind. The Author is
+not responsible for loss of data, missed RSVPs, hosting problems, or any
+damage resulting from the use of the Template.
+
+The Template is a static website. It does not store guest responses by itself.
+The Buyer is solely responsible for configuring, testing and securing any
+RSVP service, and for complying with privacy and data-protection laws that
+apply to the guests' personal information.
+
+-------------------------------------------------------------------------------
+6. TERMINATION
+-------------------------------------------------------------------------------
+This licence ends automatically if the Buyer breaks its terms. On termination
+the Buyer must delete all copies of the Template.
+
+-------------------------------------------------------------------------------
+7. CONTACT
+-------------------------------------------------------------------------------
+Questions about this licence: [your-email@your-domain.com]
+
+(c) [Year] [Your Name or Studio Name]. All rights reserved.
