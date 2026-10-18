@@ -906,6 +906,36 @@
   /* ----------------------------------------------------------------------
      10. FAQ ACCORDION
      ---------------------------------------------------------------------- */
+  function initGifts() {
+    var dialog = document.querySelector('[data-gifts-modal]');
+    var openBtn = document.querySelector('[data-gifts-open]');
+    if (!dialog || !openBtn) return;
+    var closeBtn = dialog.querySelector('[data-gifts-close]');
+    var supportsDialog = typeof dialog.showModal === 'function';
+
+    function open() {
+      document.documentElement.classList.add('lightbox-open');
+      dialog.classList.remove('is-closing');
+      if (supportsDialog) dialog.showModal();
+      else dialog.setAttribute('open', '');
+    }
+
+    function close() {
+      if (supportsDialog && dialog.open) dialog.close();
+      else dialog.removeAttribute('open');
+      document.documentElement.classList.remove('lightbox-open');
+    }
+
+    openBtn.addEventListener('click', open);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) close();
+    });
+    dialog.addEventListener('close', function () {
+      document.documentElement.classList.remove('lightbox-open');
+    });
+  }
+
   function initFaq() {
     var wrapper = mount('faq');
     if (!wrapper) return;
@@ -933,6 +963,43 @@
       else if (event.key === 'End') next = triggers[triggers.length - 1];
       if (next) { event.preventDefault(); next.focus(); }
     });
+  }
+
+  /* The floral image sits inside the band and drifts more slowly than the page. */
+  function initParallax() {
+    var layers = document.querySelectorAll('[data-parallax]');
+    if (!layers.length || prefersReducedMotion.matches) return;
+
+    var ticking = false;
+    function update() {
+      var viewH = window.innerHeight || 0;
+      Array.prototype.forEach.call(layers, function (layer) {
+        var section = layer.parentElement;
+        if (!section) return;
+        var rect = section.getBoundingClientRect();
+        var travel = -(rect.top + rect.height / 2 - viewH / 2) * 0.35;
+        var limit = section.offsetHeight * 0.2;
+        if (travel > limit) travel = limit;
+        if (travel < -limit) travel = -limit;
+        layer.style.transform = 'translate3d(0,' + travel.toFixed(2) + 'px,0)';
+      });
+      ticking = false;
+    }
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    prefersReducedMotion.addEventListener('change', function (event) {
+      if (event.matches) {
+        Array.prototype.forEach.call(layers, function (layer) { layer.style.transform = ''; });
+      } else {
+        requestUpdate();
+      }
+    });
+    requestUpdate();
   }
 
   /* ----------------------------------------------------------------------
@@ -1260,6 +1327,8 @@
         initLightbox();
         initFaq();
         initRsvp();
+        initGifts();
+        initParallax();
         initReveal();
         if (window.location.hash.length > 1) {
           var wanted = window.location.hash.slice(1);
@@ -1298,6 +1367,8 @@
       initLightbox();
       initFaq();
       initRsvp();
+      initGifts();
+      initParallax();
       initReveal();
 
       // Honour a deep link such as #faq now that the page has its full height.
